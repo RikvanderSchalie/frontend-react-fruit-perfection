@@ -9,6 +9,12 @@ import './App.css';
 function App() {
   const [messageValue, setMessageValue] = React.useState('');
   const [checkedTerms, toggleCheckedTerms] = React.useState(false);
+  const [submitted, setSubmitted] = React.useState(false);
+
+  function sendForm() {
+    console.log(`Het bericht: "${messageValue}" is succesvol verzonden.`);
+    setSubmitted(true);
+  }
 
   return (
     <>
@@ -82,6 +88,7 @@ function App() {
             <button
               type="submit"
               disabled={!checkedTerms}
+              onClick={sendForm}
             >
               Verstuur
             </button>
