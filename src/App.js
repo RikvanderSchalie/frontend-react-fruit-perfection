@@ -8,6 +8,7 @@ import './App.css';
 
 function App() {
   const [messageValue, setMessageValue] = React.useState('');
+  const [checkedTerms, toggleCheckedTerms] = React.useState(false);
 
   return (
     <>
@@ -60,11 +61,28 @@ function App() {
               type="text"
               placeholder="Typ hier jouw bericht"
               name="message"
+              className={messageValue.length > 20 ? 'input-error' : ''}
               value={messageValue}
               onChange={(e) => setMessageValue(e.target.value)}
             />
+            {messageValue.length > 20 && <p className="error-message">Dit bericht is te lang!</p>}
 
-            <button type="submit">
+            <label htmlFor="terms-and-conditions">
+              <input
+                type="checkbox"
+                name="terms-and-conditions"
+                id="terms-and-conditions"
+                checked={checkedTerms}
+                onChange={() => toggleCheckedTerms(!checkedTerms)}
+              />
+
+              Ik ga akkoord met de algemene voorwaarden
+            </label>
+
+            <button
+              type="submit"
+              disabled={!checkedTerms}
+            >
               Verstuur
             </button>
           </form>
