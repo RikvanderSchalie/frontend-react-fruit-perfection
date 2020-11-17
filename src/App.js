@@ -7,6 +7,8 @@ import { ReactComponent as ShoppingCart } from './assets/winkelmandje.svg';
 import './App.css';
 
 function App() {
+  const [messageValue, setMessageValue] = React.useState('');
+
   return (
     <>
       <nav>
@@ -49,6 +51,25 @@ function App() {
           description="Een ijsblokje of ijsklontje is bevroren water in de vorm van een klein blokje. Het wordt gemaakt in een diepvriezer door water in een plastic vorm te laten bevriezen."
         />
       </main>
+      <footer>
+        <div className="form-container">
+          <h2>Contactformulier</h2>
+
+          <form>
+            <input
+              type="text"
+              placeholder="Typ hier jouw bericht"
+              name="message"
+              value={messageValue}
+              onChange={(e) => setMessageValue(e.target.value)}
+            />
+
+            <button type="submit">
+              Verstuur
+            </button>
+          </form>
+        </div>
+      </footer>
     </>
   );
 }
