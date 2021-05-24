@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Product from "./Product";
-
+import { ReactComponent as ShoppingCart } from './assets/winkelmandje.svg';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
                           <a href="/">blog</a>
                       </li>
                   </ul>
+                  <ShoppingCart className="shopping-cart-icon" />
               </nav>
 
 
