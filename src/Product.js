@@ -20,7 +20,7 @@ function Product({naam, tekst, afbeelding})
         <article className="product">
             <h2 className="product-name">{naam}</h2>
             <p className="product-description">{tekst}</p>
-            <img src={afbeelding}/>
+            <img className="product img" src={afbeelding}/>
         </article>
 
 )

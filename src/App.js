@@ -2,6 +2,10 @@ import React from 'react';
 import './App.css';
 import Product from "./Product";
 import { ReactComponent as ShoppingCart } from './assets/winkelmandje.svg';
+//images
+import citroen from './assets/citroenen.jpeg'
+import limoen from './assets/limoenen.png'
+import ijsblok from './assets/ijsblokjes.jpg'
 
 function App() {
   return (
@@ -38,7 +42,7 @@ function App() {
     <main>
 
         <Product
-            afbeelding="https://www.plusonline.nl/sites/plusonline/files/citroen_1.jpg"
+            afbeelding={citroen}
             naam="Citroen"
             tekst="Een citroen is voor de meeste mensen te zuur om zo uit de hand te eten.
                Van citroen kun je het vruchtvlees, het sap en de schil gebruiken.
@@ -46,7 +50,7 @@ function App() {
             />
 
         <Product
-            afbeelding="https://www.ahealthylife.nl/wp-content/uploads/2017/06/limoen_voedingswaarde-768x499.jpg"
+            afbeelding={limoen}
             naam="Limoen"
             tekst="Limoen is familie van de citroen en de sinaasappel en behoort tot de citrusvruchten (Wijnruitfamilie).
                  Limoenen zijn rond en kleiner dan citroenen.
@@ -54,7 +58,7 @@ function App() {
         />
 
         <Product
-            afbeelding="https://verbakelparty.nl/wp-content/uploads/2017/08/download-46.jpg"
+            afbeelding={ijsblok}
             naam="Ijsblokjes"
             tekst="Een ijsblokje of ijsklontje is bevroren water in de vorm van een klein blokje.
                  Het wordt gemaakt in een diepvriezer door water in een plastic vorm te laten bevriezen."
