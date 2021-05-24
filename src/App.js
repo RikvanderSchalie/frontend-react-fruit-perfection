@@ -6,7 +6,13 @@ function App() {
   return (
 
       <>
-          <header></header>
+          <header>
+              <h1>"Fruit perfection" </h1>
+              <button
+                type="button"
+                onClick={() => console.log ("BUY BUY BUY") }
+              >"Shop nu !"</button>
+          </header>
     <main>
 
         <Product
