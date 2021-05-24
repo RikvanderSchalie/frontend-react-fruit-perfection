@@ -28,9 +28,8 @@ function App() {
                   <ShoppingCart className="shopping-cart-icon" />
               </nav>
 
-
-
               <h1>Fruit perfection </h1>
+
               <button
                 type="button"
                 onClick={() => console.log ("BUY BUY BUY") }
@@ -91,6 +90,23 @@ function App() {
         </article>*/}
         </main>
 
+          <footer>
+              <div className="form-container">
+                  <h2>Contactformulier</h2>
+
+                  <form>
+                      <input
+                          type="text"
+                          placeholder="Typ hier jouw bericht"
+                          name="message"
+                      />
+                  </form>
+
+                  <button type="submit">
+                      Verstuur
+                  </button>
+              </div>
+          </footer>
 
           </>
   );
