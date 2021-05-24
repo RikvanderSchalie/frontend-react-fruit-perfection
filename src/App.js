@@ -2,16 +2,37 @@ import React from 'react';
 import './App.css';
 import Product from "./Product";
 
+
 function App() {
   return (
 
       <>
           <header>
-              <h1>"Fruit perfection" </h1>
+
+              <nav>
+                  <ul>
+                      <li>
+                          <a href="/">shop</a>
+                      </li>
+                      <li>
+                          <a href="/">ons verhaal</a>
+                      </li>
+                      <li>
+                          <a href="/">blog</a>
+                      </li>
+                  </ul>
+              </nav>
+
+
+
+              <h1>Fruit perfection </h1>
               <button
                 type="button"
                 onClick={() => console.log ("BUY BUY BUY") }
-              >"Shop nu !"</button>
+              >
+                  Shop nu !
+              </button>
+
           </header>
     <main>
 
